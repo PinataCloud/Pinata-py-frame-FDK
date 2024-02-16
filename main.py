@@ -40,7 +40,10 @@ async def home(request: Request):
 @app.post("/view")
 @app.get("/view")
 def view(request: Request):
-    pinataAnalytics.send_post_request(request)
+    try :
+        pinataAnalytics.send_post_request(request)
+    except Exception as e:
+        print(f"Error: {e}")
     #body = request.body()
     
     #buttonIndex = body.data.untrusted
