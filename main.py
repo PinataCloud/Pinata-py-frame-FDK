@@ -45,8 +45,6 @@ async def view(request: Request):
         body = await request.body()
         body_str = body.decode('utf-8')
         body_json = json.loads(body_str)
-        untrustedData = body_json.get("untrustedData")
-        buttonIndex = untrustedData["buttonIndex"]
         pinataAnalytics.send_post_request(body_json)
     except Exception as e:
         buttonIndex = "No index found"
