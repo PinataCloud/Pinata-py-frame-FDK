@@ -40,17 +40,15 @@ async def home(request: Request):
 
 @app.post("/view")
 @app.get("/view")
-def view(request: Request):
+async def view(request: Request):
     try :
         pinataAnalytics.send_post_request(request)
     except Exception as e:
         print(f"Error: {e}")
     try :
-        body = request.body()
+        body = await request.body()
         body_str = body.decode('utf-8')
-        body_json = json.loads(body_str)
-        untrustedData = body_json["untrustedData"]
-        buttonIndex = untrustedData["buttonIndex"]
+        buttonIndex = body_str[0:11]
     except Exception as e:
         buttonIndex = "NO INDEX FOUND"
     print(f"Button {buttonIndex} was clicked")
