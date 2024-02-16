@@ -46,11 +46,8 @@ def view(request: Request):
     except Exception as e:
         print(f"Error: {e}")
     try :
-        body = request.body()
-        body_str = body.decode('utf-8')
-        body_json = json.loads(body_str)
-        untrustedData = body_json["untrustedData"]
-        buttonIndex = untrustedData["buttonIndex"]
+        body_str = request.body().decode('utf-8')
+        buttonIndex = body_str[0:11]
     except Exception as e:
         buttonIndex = "NO INDEX FOUND"
     print(f"Button {buttonIndex} was clicked")
