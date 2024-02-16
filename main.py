@@ -1,3 +1,4 @@
+import json
 import textwrap
 import os
 import util.pinataAnalytics as pinataAnalytics
@@ -46,7 +47,9 @@ def view(request: Request):
         print(f"Error: {e}")
     try :
         body = request.body()
-        untrustedData = body["untrustedData"]
+        body_str = body.decode('utf-8')
+        body_json = json.loads(body_str)
+        untrustedData = body_json["untrustedData"]
         buttonIndex = untrustedData["buttonIndex"]
     except Exception as e:
         buttonIndex = "NO INDEX FOUND"
