@@ -41,10 +41,10 @@ async def home(request: Request):
 @app.get("/view")
 def view(request: Request):
     pinataAnalytics.send_post_request(request)
-    body = request.body()
+    #body = request.body()
     
-    buttonIndex = body.data.untrusted
-    print(f"Button {buttonIndex} was clicked")
+    #buttonIndex = body.data.untrusted
+    #print(f"Button {buttonIndex} was clicked")
     frame_index = request.query_params.get("frame")
     next_frame = int(frame_index) + 1
     
