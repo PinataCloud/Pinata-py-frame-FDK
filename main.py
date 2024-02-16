@@ -42,16 +42,12 @@ async def home(request: Request):
 @app.get("/view")
 async def view(request: Request):
     try :
-        pinataAnalytics.send_post_request(request)
-    except Exception as e:
-        print(f"Error: {e}")
-    try :
         body = await request.body()
         body_str = body.decode('utf-8')
-        buttonIndex = body_str[0:11]
+        body_json = json.loads(body_str)
+        pinataAnalytics.send_post_request(body_json)
     except Exception as e:
-        buttonIndex = "NO INDEX FOUND"
-    print(f"Button {buttonIndex} was clicked")
+        print(f"Error: {e}")
     frame_index = request.query_params.get("frame")
     next_frame = int(frame_index) + 1
     
@@ -82,7 +78,7 @@ async def view(request: Request):
                     <meta property="og:title" content="Frame" />
                     <meta property="fc:frame" content="vNext" />
                     <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/mc{frame_index}.jpg" />
-                    <meta property="fc:frame:button:1" content="{buttonIndex}" />
+                    <meta property="fc:frame:button:1" content="Next" />
                     <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame={next_frame}" />
                     </head></html>"""
             )
