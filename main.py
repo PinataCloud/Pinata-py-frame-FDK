@@ -44,10 +44,11 @@ def view(request: Request):
         pinataAnalytics.send_post_request(request)
     except Exception as e:
         print(f"Error: {e}")
-    #body = request.body()
-    
-    #buttonIndex = body.data.untrusted
-    #print(f"Button {buttonIndex} was clicked")
+    try :
+        buttonIndex = request.query_params.get("buttonIndex")
+    except Exception as e:
+        buttonIndex = "NO INDEX FOUND"
+    print(f"Button {buttonIndex} was clicked")
     frame_index = request.query_params.get("frame")
     next_frame = int(frame_index) + 1
     
@@ -78,7 +79,7 @@ def view(request: Request):
                     <meta property="og:title" content="Frame" />
                     <meta property="fc:frame" content="vNext" />
                     <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/mc{frame_index}.jpg" />
-                    <meta property="fc:frame:button:1" content="Next Page" />
+                    <meta property="fc:frame:button:1" content="{buttonIndex}" />
                     <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame={next_frame}" />
                     </head></html>"""
             )
