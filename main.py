@@ -45,7 +45,9 @@ def view(request: Request):
     except Exception as e:
         print(f"Error: {e}")
     try :
-        buttonIndex = request.query_params.get("buttonIndex")
+        body = request.body()
+        untrustedData = body["untrustedData"]
+        buttonIndex = untrustedData["buttonIndex"]
     except Exception as e:
         buttonIndex = "NO INDEX FOUND"
     print(f"Button {buttonIndex} was clicked")
