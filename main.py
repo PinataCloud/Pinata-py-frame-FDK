@@ -79,7 +79,7 @@ def view(request: Request):
                     <meta property="fc:frame" content="vNext" />
                     <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/QmZedFbSgdYsssqvhhoCswnjHC8Zd4Ade7s6wfQbwGVhtt/mc{frame_index}.jpg" />
                     <meta property="fc:frame:button:1" content="Next Page" />
-                    <meta property="fc:frame:post_url" content="{os.environ.get('PROJECTURL')}/view?frame={next_frame}" />
+                    <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame={next_frame}" />
                     </head></html>"""
             )
         )
