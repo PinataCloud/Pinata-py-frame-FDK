@@ -46,8 +46,12 @@ async def view(request: Request):
     except Exception as e:
         print(f"Error: {e}")
     try :
+<<<<<<< HEAD
         body = await request.body()
         body_str = body.decode('utf-8')
+=======
+        body_str = request.body().decode('utf-8')
+>>>>>>> bb73b72d55995c82ea76e39ffca428956e4bd1c9
         buttonIndex = body_str[0:11]
     except Exception as e:
         buttonIndex = "NO INDEX FOUND"
