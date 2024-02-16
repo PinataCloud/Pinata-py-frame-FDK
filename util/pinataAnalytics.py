@@ -14,7 +14,7 @@ def send_post_request(body_json):
     }
     json_str = json.dumps(payload)
     print(json_str)
-    response = requests.post(url, json=payload)
+    response = requests.post(url, json=payload, headers=headers)
     print(response.status_code)
     print(response.text)
     print(response.json())
