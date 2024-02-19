@@ -7,6 +7,12 @@ GATEWAY_URL=Your Pinata Gateway
 
 PROJECT_URL=Your Server URL
 
+TITLE=Title your project. This will appear in title sections of the project. This will also assist in your frame analytics, which this will also be your frame_id.
+
+EXTERNAL_URL=A url that will be linked to a button on the last frame that will take users to an external url of your choosing.
+
+INITIAL_IMAGE_URL=This is a url that will be the first image people see. This should not change as Farcaster clients cache this.
+
 FOLDER_CID=The CID hash that you want to showcase in your frame.
 
 PINATA_JWT=This is your Pinata JWT that will be used so you can get frame analytics on your frame.
