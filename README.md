@@ -15,11 +15,13 @@ INITIAL_IMAGE_URL=This is a url that will be the first image people see. This sh
 
 FOLDER_CID=The CID hash that you want to showcase in your frame.
 
-PINATA_JWT=This is your Pinata JWT that will be used so you can get frame analytics on your frame.
-
 NUMBER_OF_IMAGES=The number of images in your folder.
 
-PORT=8000
+TYPE_IMAGE=What type of image are you using, jpg, png... this is the 3 letter suffix of your types, must be the same.
+
+PINATA_JWT=This is your Pinata JWT that will be used so you can get frame analytics on your frame.
+
+PORT=8000 use this port in your cloud services
 
 ## Python 3.12.1
 
