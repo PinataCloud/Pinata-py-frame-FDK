@@ -50,7 +50,7 @@ async def view(request: Request):
     frame_index = request.query_params.get("frame")
     next_frame = int(frame_index) + 1 
     imgCount = int(os.environ.get('NUMBER_OF_IMAGES'))
-    if int(frame_index) == 9:
+    if int(frame_index) == imgCount:
         return HTMLResponse (
             status_code=200,
             content=textwrap.dedent(
