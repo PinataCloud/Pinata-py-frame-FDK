@@ -17,17 +17,17 @@ async def home(request: Request):
             <!DOCTYPE html>
             <html>
                 <head>
-                    <title>Lyte Cycles</title>
-                    <meta property="og:title" content="Lyte Cycles" />
-                    <meta property="fc:frame:image" content="https://www.lytecycle.com/ipfs/QmXJmFJxRELU2KT7NSYqLcnqGaGbFftD3vtkb9fa28YWv1" />
+                    <title>{os.environ.get('TITLE')}</title>
+                    <meta property="og:title" content="{os.environ.get('TITLE')}" />
+                    <meta property="fc:frame:image" content="{os.environ.get('INITIAL_IMAGE_URL')}" />
                     <meta property="fc:frame" content="vNext" />
                     <meta property="fc:frame:button:1" content="Begin" />
                     <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=1" />
                 </head>
                 <body>
-                    <h1>Lyte Cycles</h1>
+                    <h1>{os.environ.get('TITLE')}</h1>
                     <div>
-                        <img src="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/mc1.jpg" alt="Lyte Cycles Image">
+                        <img src="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/1.jpg" alt="{os.environ.get('TITLE')}">
                     </div>
                     <div>
                         <a href="https://pinata.cloud" target="_blank">Powered by Pinata</a>
@@ -58,13 +58,13 @@ async def view(request: Request):
                     <title>This is frame {frame_index}</title>
                     <meta property="og:title" content="Frame" />
                     <meta property="fc:frame" content="vNext" />
-                    <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/mc{frame_index}.jpg" />
-                    <meta property="fc:frame:button:1" content="Built With..." />
+                    <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/{frame_index}.jpg" />
+                    <meta property="fc:frame:button:1" content="{os.environ.get('TITLE')}" />
                     <meta property="fc:frame:button:1:action" content="link" />
-                    <meta property="fc:frame:button:1:target" content="https://pinata.cloud" />
-                    <meta property="fc:frame:button:2" content="Lyte Cycles" />
+                    <meta property="fc:frame:button:1:target" content="{os.environ.get('TITLE')}" />
+                    <meta property="fc:frame:button:2" content="Built With..." />
                     <meta property="fc:frame:button:2:action" content="link" />
-                    <meta property="fc:frame:button:2:target" content="https://www.lytecycle.com/ipfs/{os.environ.get('FOLDER_CID')}/mc1.jpg" />
+                    <meta property="fc:frame:button:2:target" content="https://pinata.cloud" />
                     </head></html>"""
             )
         )    
@@ -76,7 +76,7 @@ async def view(request: Request):
                     <title>This is frame {frame_index}</title>
                     <meta property="og:title" content="Frame" />
                     <meta property="fc:frame" content="vNext" />
-                    <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/mc{frame_index}.jpg" />
+                    <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/{frame_index}.jpg" />
                     <meta property="fc:frame:button:1" content="Next" />
                     <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame={next_frame}" />
                     </head></html>"""
