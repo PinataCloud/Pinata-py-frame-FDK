@@ -27,7 +27,7 @@ async def home(request: Request):
                 <body>
                     <h1>{os.environ.get('TITLE')}</h1>
                     <div>
-                        <img src="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/1.jpg" alt="{os.environ.get('TITLE')}">
+                        <img src="{os.environ.get('INITIAL_IMAGE_URL')}" alt="{os.environ.get('TITLE')}">
                     </div>
                     <div>
                         <a href="https://pinata.cloud" target="_blank">Powered by Pinata</a>
