@@ -11,6 +11,8 @@ FOLDER_CID=The CID hash that you want to showcase in your frame.
 
 PINATA_JWT=This is your Pinata JWT that will be used so you can get frame analytics on your frame.
 
+PORT=8000
+
 ## Python 3.12.1
 
 ## Build Command:
