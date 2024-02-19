@@ -17,7 +17,7 @@ FOLDER_CID=The CID hash that you want to showcase in your frame.
 
 NUMBER_OF_IMAGES=The number of images in your folder.
 
-IMAGE_TYPE=What type of image are you using, jpg, png... this is the 3 letter suffix of your types, must be the same.
+IMAGE_TYPE=What type of image are you using, jpg, png... this is the 3 letter suffix of your image file name, must be the same.
 
 PINATA_JWT=This is your Pinata JWT that will be used so you can get frame analytics on your frame.
 
