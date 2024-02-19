@@ -61,7 +61,7 @@ async def view(request: Request):
                     <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/{frame_index}.jpg" />
                     <meta property="fc:frame:button:1" content="{os.environ.get('TITLE')}" />
                     <meta property="fc:frame:button:1:action" content="link" />
-                    <meta property="fc:frame:button:1:target" content="{os.environ.get('TITLE')}" />
+                    <meta property="fc:frame:button:1:target" content="{os.environ.get('EXTERNAL_URL')}" />
                     <meta property="fc:frame:button:2" content="Built With..." />
                     <meta property="fc:frame:button:2:action" content="link" />
                     <meta property="fc:frame:button:2:target" content="https://pinata.cloud" />
