@@ -5,7 +5,7 @@ import os
 def send_post_request(body_json):
     url = "https://api.pinata.cloud/farcaster/frames/interactions"
     payload = {
-        "frame_id": os.environ.get("FRAME_ID"),
+        "frame_id": os.environ.get('TITLE'),
         "data": body_json
     }
     headers = {
