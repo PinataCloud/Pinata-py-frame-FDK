@@ -13,4 +13,5 @@ def send_post_request(body_json):
         "Content-Type": "application/json"
     }
     response = requests.post(url, json=payload, headers=headers)
+    print(response.text)
     return response.json()
