@@ -3,9 +3,9 @@
 This is a 102 line, 3 file Python project so you can get started with showcasing content on Farcaster.
 
 ## Project Variables
-GATEWAY_URL=Your Pinata Gateway
+GATEWAY_URL=Your Pinata Gateway. Include https://, also do not have any slashes at the end, ex: https://mygateway.mypinata.cloud
 
-PROJECT_URL=Your Server URL
+PROJECT_URL=Your Server URL. Include https://, also do not have any slashes at the end, ex: https://myprojecturl.railway.app
 
 TITLE=Title your project. This will appear in title sections of the project. This will also assist in your frame analytics, which this will also be your frame_id.
 
@@ -30,3 +30,7 @@ pip install -r requirements.txt
 
 ## Deploy Command:
 uvicorn main:app --host 0.0.0.0 --port $PORT
+
+##Repo Information:
+Go to https://pinata.cloud to create a free account to set your GATEWAY_URL, FOLDER_CID, and PINATA_JWT.
+I used Railway my web server services.
