@@ -31,7 +31,6 @@ pip install -r requirements.txt
 ## Deploy Command:
 uvicorn main:app --host 0.0.0.0 --port $PORT
 
-##Repo Information:
-
+## Repo Information:
 Go to https://pinata.cloud to create a free account to set your GATEWAY_URL, FOLDER_CID, and PINATA_JWT.
 I used Railway my web server services.
