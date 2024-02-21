@@ -23,6 +23,18 @@ PINATA_JWT=This is your Pinata JWT that will be used so you can get frame analyt
 
 PORT=8000 use this port in your cloud services
 
+Example:
+GATEWAY_URL=https://alienframeware.mypinata.cloud
+PROJECT_URL=Your Server URL
+TITLE=Lyte Cycles
+EXTERNAL_URL=https://www.lytecycle.com
+INITIAL_IMAGE_URL=https://www.lytecycle.com/ipfs/QmRx3pGZm6ebtFmudzH8x6cMTzm5ecGUYMr56tT78ka35Q
+FOLDER_CID=QmdAi1v1quzrRjE2r97gmWuJpxJNAqn8gywcwrQq91gpoZ
+NUMBER_OF_IMAGES=9
+IMAGE_TYPE=jpg
+PINATA_JWT=eyJhbSOMEJWT
+PORT=8000
+
 ## Python 3.12.1
 
 ## Build Command:
@@ -33,4 +45,17 @@ uvicorn main:app --host 0.0.0.0 --port $PORT
 
 ## Repo Information:
 Go to https://pinata.cloud to create a free account to set your GATEWAY_URL, FOLDER_CID, and PINATA_JWT.
-I used Railway (https://railway.app/) my web server services.
+I used Railway (https://railway.app/) my web server services, they also have a free trial for 30 days.
+
+## Steps:
+1. Set your variables, recommend putting them into a text doc.
+2. Go to Pinata, get your gateway, folder CID and JWT.
+3. Fork this repo to your github account.
+4. Go to Railway and link your github account.
+5. Create a web service in Railway.
+6. Get your project URL under service settings (networking) by creating it.
+7. In the variables, paste your variables into the raw editor.
+8. Under your service setting, set the build command and set the deploy command.
+9. Spin up the services and then cast your frame.
+10. Let people view your frame.
+11. View analytics at Pinata.
