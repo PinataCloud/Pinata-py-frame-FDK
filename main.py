@@ -25,7 +25,7 @@ async def home(request: Request):
                     <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=1" />
                 </head>
                 <body>
-                    <h1>{os.environ.get('TITLE')}</h1>
+                    <h1>{os.environ.get('TITLE')} on Farcaster!</h1>
                     <div>
                         <img src="{os.environ.get('INITIAL_IMAGE_URL')}" alt="{os.environ.get('TITLE')}">
                     </div>
