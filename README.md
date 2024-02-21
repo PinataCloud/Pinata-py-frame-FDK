@@ -7,7 +7,7 @@ GATEWAY_URL=Your Pinata Gateway. Include https://, also do not have any slashes 
 
 PROJECT_URL=Your Server URL. Include https://, also do not have any slashes at the end, ex: https://myprojecturl.railway.app
 
-TITLE=Title your project. This will appear in title sections of the project. This will also assist in your frame analytics, which this will also be your frame_id.
+TITLE=Title your project. This will appear in title sections of the project. This will also assist in your frame analytics, which will also be your frame_id. No spaces or special characters.
 
 EXTERNAL_URL=A url that will be linked to a button on the last frame that will take users to an external url of your choosing.
 
@@ -29,7 +29,7 @@ GATEWAY_URL=https://alienframeware.mypinata.cloud
 
 PROJECT_URL=Your Server URL
 
-TITLE=Lyte Cycles
+TITLE=LyteCycles
 
 EXTERNAL_URL=https://www.lytecycle.com
 
