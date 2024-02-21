@@ -25,14 +25,23 @@ PORT=8000 use this port in your cloud services
 
 Example:
 GATEWAY_URL=https://alienframeware.mypinata.cloud
+
 PROJECT_URL=Your Server URL
+
 TITLE=Lyte Cycles
+
 EXTERNAL_URL=https://www.lytecycle.com
+
 INITIAL_IMAGE_URL=https://www.lytecycle.com/ipfs/QmRx3pGZm6ebtFmudzH8x6cMTzm5ecGUYMr56tT78ka35Q
+
 FOLDER_CID=QmdAi1v1quzrRjE2r97gmWuJpxJNAqn8gywcwrQq91gpoZ
+
 NUMBER_OF_IMAGES=9
+
 IMAGE_TYPE=jpg
+
 PINATA_JWT=eyJhbSOMEJWT
+
 PORT=8000
 
 ## Python 3.12.1
