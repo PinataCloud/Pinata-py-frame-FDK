@@ -27,7 +27,7 @@ PORT=8000 use this port in your cloud services
 
 GATEWAY_URL=https://alienframeware.mypinata.cloud
 
-PROJECT_URL=Your Server URL
+PROJECT_URL=https://lyte-cycles.up.railway.app
 
 TITLE=LyteCycles
 
