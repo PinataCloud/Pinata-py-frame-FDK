@@ -23,7 +23,8 @@ PINATA_JWT=This is your Pinata JWT that will be used so you can get frame analyt
 
 PORT=8000 use this port in your cloud services
 
-Example:
+### Example:
+
 GATEWAY_URL=https://alienframeware.mypinata.cloud
 
 PROJECT_URL=Your Server URL
