@@ -1,6 +1,6 @@
 # A Simple Frame For Showcasing Content
 
-A no code solution for people who want to get a frame up with their content. This is a 102 line, 3 file Python project so you can get started with showcasing content on Farcaster.
+A no code solution for people who want to get a frame up with their content. This is a 102 line, 3 file Python project so you can get started with showcasing content on Farcaster. All this requires a Pinata account, Github account and a Railway account.
 
 ## Project Variables
 GATEWAY_URL=Your Pinata Gateway. Include https://, also do not have any slashes at the end, ex: https://mygateway.mypinata.cloud
